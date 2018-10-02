@@ -75,7 +75,7 @@ Example 2:
 		False
 """
 def subset_sum(arr, target):
-	if not arr:
+    if not arr:
         return False
     arr.sort(reverse=True)
     if arr[0] == target:
