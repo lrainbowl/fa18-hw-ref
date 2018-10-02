@@ -11,7 +11,7 @@ As with math, assume that indices are in [row][column] format, so each inner lis
 def matrix_multiply(arr0, arr1):
     if not arr0 or not arr1 or len(arr0[0]) != len(arr1):
         return None
-    return np.matmul(arr0, arr1)
+    return np.matmul(arr0, arr1).tolist()
             
 
 """
@@ -105,4 +105,4 @@ def spiral_matrix(arr):
     while arr.size:
         spiral.append(arr[0])
         arr = arr[1:].T[::-1]
-    return np.concatenate(spiral)
+    return np.concatenate(spiral).tolist()
